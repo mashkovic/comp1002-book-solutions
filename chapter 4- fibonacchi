@@ -1,0 +1,31 @@
+/* MASHRUR MAHBUB HYDER
+   email: mashrurmahbubhyder95@gmail.com
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10000000
+
+int main(){
+	int curr, yesterday1, day_before, day = 0, total;
+    /*initial conditions*/
+	yesterday1 = 0;
+    day_before = 1;
+    /*one value was kept 1 as the inital number of spores is 1*/
+
+    while(1) {
+        day += 1;
+        curr = (yesterday1 + day_before);
+        day_before = yesterday1;
+        yesterday1 = curr;
+        total += curr;
+        if (total > MAX) {
+           printf("overflow\n");
+           exit(EXIT_FAILURE);
+        }
+        printf("day = %2d, spores = %7d\n", day, curr);
+
+    }
+    return 0;
+}
