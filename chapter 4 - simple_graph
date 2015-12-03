@@ -1,0 +1,25 @@
+/* MASHRUR MAHBUB HYDER
+   email:mashrurmahbubhyder95@gmail.com
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,i;
+    printf("Enter numbers with spaces inbetween(CTRL D to finish): ");
+    while((scanf("%d",&x) == 1)){
+          if(x > 70){
+          	  printf("INVALID INPUT");
+          	  exit(EXIT_FAILURE);
+          }else{
+          	  printf("%2d |",x);
+          	  for(i = 0; i<= x; i++){
+                printf("*");
+              }
+          }    
+          printf("\n");
+    }
+    return 0;
+}
