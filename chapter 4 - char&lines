@@ -1,0 +1,23 @@
+/* MASHRUR MAHBUB HYDER
+   email: mashrurmahbubhyder95@gmail.com
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int char_count = 0, line_count = 0;
+    char charecter;
+    printf("Enter text: \n");
+    while( (charecter = getchar()) != EOF){
+        if(charecter == '\n'){
+            line_count++;
+        }else{
+            char_count++;
+        }
+    }
+    printf("lines: %d\n",line_count);
+    printf("charecters: %d\n", char_count);
+    return 0;
+}
